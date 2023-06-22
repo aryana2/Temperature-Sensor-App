@@ -1,0 +1,267 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:scrollbarAlwaysDrawVerticalTrack="false"
+    android:fillViewport="true"
+    tools:context=".fragment_tab3"
+    android:paddingEnd="15dp"
+    android:paddingStart="15dp"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:id="@+id/fragment3" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/response"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="12dp"
+            android:text="Settings"
+            android:textAlignment="center"
+            android:textColor="#000"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text=" Temperature Display"
+            android:textAlignment="textStart"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            android:background="#dce7fa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/response"
+            app:layout_constraintBottom_toTopOf="@id/linear"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/linear"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/textView"
+            app:layout_constraintBottom_toTopOf="@id/Bluetooth"
+            app:tabBackground="@color/card_bg_color"
+            app:tabIndicatorColor="#4e95d4"
+            app:tabIndicator="@drawable/tab_day_outline"
+            app:tabIndicatorGravity="stretch">
+<!--            style="@style/MyCustomTabLayout">-->
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°F" />
+
+        <com.google.android.material.tabs.TabItem
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="°C" />
+        </com.google.android.material.tabs.TabLayout>
+
+        <TextView
+            android:id="@+id/Bluetooth"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:textAlignment="textStart"
+            android:text=" Bluetooth"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            android:background="#dce7fa"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/connect"
+            app:layout_constraintTop_toBottomOf="@+id/linear" />
+
+        <Button
+            android:id="@+id/connect"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text=""
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/textView4"
+            app:layout_constraintTop_toBottomOf="@+id/Bluetooth" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text=" Notification Preferences"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/enable"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/connect"
+            android:background="#dce7fa"/>
+
+        <CheckBox
+            android:id="@+id/enable"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:checked="true"
+            android:text="Enable Notifications"
+            android:buttonTint="#18a3fe"
+            android:textSize="16sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/notify"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="start"
+            android:layout_marginStart="11dp"
+            android:layout_marginTop="16dp"
+            android:text="Notify Every"
+            android:textSize="16dp"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/enable" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="16dp"
+            android:spinnerMode="dropdown"
+            app:layout_constraintStart_toEndOf="@+id/notify"
+            app:layout_constraintTop_toBottomOf="@+id/enable" />
+
+        <TextView
+            android:id="@+id/general"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:text=" General"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tippers"
+            android:background="#dce7fa"/>
+
+        <Button
+            android:id="@+id/bugs"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="   Send App Feedback"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/next_arrow"
+            android:drawableStart="@drawable/feedback"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/general"
+            app:layout_constraintBottom_toTopOf="@+id/tutorial"/>
+
+        <Button
+            android:id="@+id/consent"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:text="View My Consent Forms"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"
+            android:drawableRight="@drawable/next_arrow"
+            android:drawableLeft="@drawable/ic_b1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tutorial"
+            app:layout_constraintBottom_toTopOf="@+id/view"/>
+
+        <Button
+            android:id="@+id/tutorial"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="4dp"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/next_arrow"
+            android:drawableStart="@drawable/information"
+            android:text="   How to Use Sensor and App"
+            android:textAlignment="textStart"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/bugs"
+            app:layout_constraintBottom_toTopOf="@+id/consent"/>
+
+        <TextView
+            android:id="@+id/textTips"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:text=" TIPPERS"
+            android:textSize="18sp"
+            android:textColor="#4a4a4a"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/notify"
+            android:background="#dce7fa"/>
+
+        <Button
+            android:id="@+id/tippers"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="4dp"
+            android:text="   TIPPERS"
+            android:textAlignment="textStart"
+            android:background="@android:color/transparent"
+            android:drawableEnd="@drawable/next_arrow"
+            android:drawableStart="@drawable/tippers_t"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textTips"
+            app:layout_constraintBottom_toTopOf="@+id/general"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="75dp"
+            android:id="@+id/view"
+            app:layout_constraintTop_toBottomOf="@+id/consent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.core.widget.NestedScrollView>

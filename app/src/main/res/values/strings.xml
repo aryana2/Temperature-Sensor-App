@@ -1,0 +1,32 @@
+<resources>
+    <string name="app_name">TEGG</string>
+    <string name="tab_text_1">Temperature</string>
+    <string name="tab_text_2">Data Log</string>
+    <string name="tab_text_3">Settings</string>
+    <string name="red_spike_message">Your temperature is critically high. You may be at risk for COVID-19.
+         Please contact your supervisor and notify the people around you immediately.</string>
+    <string name="orange_spike_message">Your temperatures indicate you have a fever. You may be at risk for COVID-19.
+        Please contact your supervisor and notify the people around you immediately.</string>
+    <string name="yellow_spike_message">Your temperature have increased and are close to a fever.</string>
+    <string name="green_spike_message">Your temperatures are normal!</string>
+    <string-array name="dropdown_times">
+        <item>30 mins</item>
+        <item>1 hour</item>
+        <item>2 hours</item>
+        <item>3 hours</item>
+        <item>6 hours</item>
+        <item>12 hours</item>
+        <item>24 hours</item>
+    </string-array>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_privacy_forms">PrivacyFormsActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="next">Next</string>
+    <string name="previous">Previous</string>
+    <string name="hello_first_fragment">Hello first fragment</string>
+    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="feedback_form"><u>TEGG Feedback Form</u></string>
+</resources>
